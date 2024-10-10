@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sanjay-worldtravelsite.in</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link rel="stylesheet" href="style1.css">
+        <style>
+           
+            
+        </style>
+    </head>
+    <body>
+        <div>
+        <div class="header">
+            <div class="logo"><img src="sanjaySanchez.png" height="50px" width="50px"></div>
+            <div class="title"><h1>Sanjay World Travel Site</h1></div>
+            <div class="actions">
+                <div class="login">
+                    <i style="size: 50px;" class="fas fa-user" style="position:relative;" onclick="change_page()"></i>
+                    
+                </div>
+                <div class="search">
+                    <i class="fas fa-search"></i> 
+                </div>
+            </div></div>
+        </div>
+        <div class="n">
+           <ul>
+            <li ><a href="home1.html" >Home</a></li>
+            <li><a href="gallery1.html">Gallery</a></li>
+            <li><a href="contact1.html">Contact</a></li>
+            <li><a href="about1.html">Explore</a></li>
+            <li><a href="forms1.html" style="color:rgb(78, 52, 17)">Register Form</a></li>
+        </ul></div>
+        
+        <div class="content" style="color:black">
+            <p style="font-size:xx-large;font-weight: bold;padding-left: 50px;">Fill this form for travel booking:</p>
+            <div class="content">
+                <form id="registerForm">
+                    <label for="name">Name</label>
+                    <div class="tooltip">
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+                        <span class="tooltiptext">Please enter your full name</span>
+                    </div>
+                    <br>
+        
+                    <label for="age">Age</label>
+                    <div class="tooltip">
+                        <input type="number" id="age" name="age" min="1" max="100" placeholder="your age"  required/>
+                        <span class="tooltiptext">Age should be between 1 and 100</span>
+                    </div>
+                    <br>
+                     
+                    <label>Gender</label>
+                    <input type="radio" id="male" name="gender" value="male" required />
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required />
+                    <label for="female">Female</label>
+                    <br><br>
+        
+                    <label for="email">Email</label>
+                    <div class="tooltip">
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                        <span class="tooltiptext">Enter a valid email address</span>
+                    </div>
+                    <br>
+                    <label>enter your Location</label>
+                    <input type="text" placeholder="enter your current location" required/>
+                    <span class="tooltiptext">Please enter your current location</span>
+        
+                    <label>contact number</label>
+                    <input type="number" placeholder="enter your contact number" required/>
+                    <span class="tooltiptext">Please enter your contact number</span>
+                     
+                    <label>Days visit</label>
+                    <input type="number" placeholder="enter how many days plan" required/>
+                    <span class="tooltiptext">Please enter how many days you visit in tour</span>
+        
+                   
+        
+                    <label for="destination">your tour destination</label>
+                    <select id="qualification" name="qualification" required>
+                        <option value="">Select your Destination</option>
+                        <option value="domestic" onselect="alert('please enter which Domestical destination')">Domestical destination</option>
+                        <option value="international" onselect="alert('please enter which international destination')">International destination</option>
+                        
+                        
+                    </select>
+        
+        
+        
+                  
+            <div id="newInputField">
+                <label for="newInput">enter how many members:</label>
+                <input type="number" placeholder="how many members in your tour">
+            </div>
+                    <br><br>
+        
+                    <label>select package type</label>
+                    <input type="radio" id="budget" name="select package type" value="budget" />
+                    <label for="budget">Budget package(>50K)</label>
+                    <br>
+                    <input type="radio" id="medium" name="select package type" value="medium" />
+                    <label for="medium">medium package(50k to 100k)</label>
+                    <br>
+                    <input type="radio" id="premium" name="select package type" value="premium" />
+                    <label for="premium">premium package(above 100k)</label>
+                    <br><br>
+                    <form action="summit.html">
+                    <button type="submit">Submit</button>
+                    </form>
+                </form>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Contact me at <a href="mailto:chellamuthusanjay7@gmail.com">chellamuthusanjay7@gmail.com</a></p>
+            <p>&copy; 2024 sanjay-worldtravelsite.in</p>
+            <p> All rights reserved</p>
+            <div class="social-media-icons">
+                <p style="color: white;">more ways to contact</p>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/sanjay-c-94815a262/" target="_blank">
+                    <img src="linkedin logo.png" alt="LinkedIn">
+                </a>
+                
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/_.__sanjay.___/" target="_blank">
+                    <img src="instagram logo.jpg" alt="Instagram">
+                </a>
+          
+                <!-- WhatsApp -->
+                <a href="https://wa.me/9361924146" target="_blank">
+                    <img src="whatsapp logo.png" alt="WhatsApp">
+                </a>
+                
+                <!-- Custom Link -->
+                <a href="https://your-custom-link.com" target="_blank">
+                    <img src="custom-icon.png" alt="Custom Link">
+                </a>
+                
+            </div>
+            
+            
+          </footer>
+          <script>
+            document.getElementById('registerForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const name = document.getElementById('name').value;
+                const age = document.getElementById('age').value;
+                const email = document.getElementById('email').value;
+    
+                if (name === '' || age === '' || email === '') {
+                    alert('Please fill in all fields');
+                } else {
+                     window.location= "summit.html";
+                    console.log('Form submitted with:', { name, age, email });
+                    this.reset(); // Reset the form after submission
+                }
+            });</script>
+    
+            <script>
+    
+              // Get references to the button and the input field div
+              const button = document.getElementById('showInputBtn');
+            const inputField = document.getElementById('newInputField');
+    
+            // Add a click event listener to the button
+            button.addEventListener('click', function() {
+                // Show the input field by changing its display style
+                inputField.style.display = 'block';
+            });
+        </script>
+        <script>
+            function change_page(){
+            window.location.href = "login1.html";
+            } 
+
+
+         
+          </script>
+       
+    </body>
+</html>
